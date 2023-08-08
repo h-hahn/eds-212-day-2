@@ -50,3 +50,26 @@ a = 1.2
 
 eval(dPda)
 ```
+
+### Section 4 tasks
+
+```{r}
+# make a plot of bill length and bill depth
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point(color = "steelblue3") +
+  labs(title = "Palmer Penguin Bill Length and Depth", x = "Bill Length (mm)", y = "Bill Depth (mm)") +
+  theme_light() + 
+  theme(plot.margin = unit(c(0.25, 0.25, 0.25, 0.25),
+                                "inches"))
+
+```
+
+```{r}
+# Jitter stuff
+ggplot(penguins, aes(species, flipper_length_mm, color = species)) +
+  geom_jitter() + 
+  labs(title = "Jitter plot of species and flipper length", x = "Species", y = "Flipper Length (mm)") +
+  theme_light() + 
+  theme(plot.margin = unit(c(0.25, 0.25, 0.25, 0.25), "inches"))
+
+```
