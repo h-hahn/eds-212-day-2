@@ -1,0 +1,12 @@
+---
+title: "eds-212-day-2-tasks"
+format: html
+editor: visual
+---
+
+## Day 2 end of day tasks
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
