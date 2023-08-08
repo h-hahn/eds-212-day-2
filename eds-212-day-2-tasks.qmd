@@ -69,6 +69,8 @@ ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
 ggplot(penguins, aes(species, flipper_length_mm, color = species)) +
   geom_jitter() + 
   labs(title = "Jitter plot of species and flipper length", x = "Species", y = "Flipper Length (mm)") +
+  scale_color_manual(values=c('pink','palegreen3','cornflowerblue'),
+                       guide=FALSE) +
   theme_light() + 
   theme(plot.margin = unit(c(0.25, 0.25, 0.25, 0.25), "inches"))
 
