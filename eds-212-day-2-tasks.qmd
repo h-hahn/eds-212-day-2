@@ -55,8 +55,10 @@ eval(dPda)
 
 ```{r}
 # make a plot of bill length and bill depth
-ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
-  geom_point(color = "steelblue3") +
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point() +
+  scale_color_manual(values=c('darkseagreen3','dodgerblue2','plum'),
+                       guide=FALSE) +
   labs(title = "Palmer Penguin Bill Length and Depth", x = "Bill Length (mm)", y = "Bill Depth (mm)") +
   theme_light() + 
   theme(plot.margin = unit(c(0.25, 0.25, 0.25, 0.25),
