@@ -10,3 +10,43 @@ editor: visual
 library(tidyverse)
 library(palmerpenguins)
 ```
+
+### Section 3 tasks:
+
+```{r}
+# ---TASK A---
+## assign function
+
+fx_task <- expression(x^2)
+
+## assign derivative
+
+dfdx_task <- D(fx_task, 'x')
+
+## assign x value
+
+x = 3
+
+## evaluate derivative
+
+eval(dfdx_task)
+```
+
+```{r}
+#---TASKB---
+## assign function
+
+Pa <- expression(2 * (3 * a + 2)^4 - 5)
+
+## assign derivative 
+
+dPda <- D(Pa, 'a')
+
+## assign a value
+
+a = 1.2
+
+## evaluate derivative at assigned a value
+
+eval(dPda)
+```
