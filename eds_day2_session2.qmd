@@ -41,8 +41,8 @@ dfdy <- D(fxyz, 'y')
 ## Penguins plot
 
 ```{r}
-ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + 
-  geom_point(color = "steelblue3") +
+ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm, color = species)) + 
+  geom_point() +
   labs(title = "Body Mass vs. Flipper Length", x = "Body Mass (g)", y = "Flipper Length (mm)") + 
   theme_light() + 
   theme(plot.margin = unit(c(0.25, 0.25, 0.25, 0.25),
